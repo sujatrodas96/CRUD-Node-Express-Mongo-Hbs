@@ -1,0 +1,36 @@
+.banner {
+    height: 400px;
+    background-image: url('../image/banner.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .content{
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .content > h2{
+    font-weight: 400;
+  }
+  .footer {
+    background-color: darkslategray;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+  body
+  {
+    background-color: beige;
+  }
+  .container{
+    background-color: darksalmon;
+  }
+  .heading_login{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .login_frm{
+    margin-top: 10px;
+  }
