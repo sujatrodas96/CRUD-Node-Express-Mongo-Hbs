@@ -105,7 +105,7 @@ app.post('/user', async(req, res) => {
 
         if(ismatch && visits.length > 0)
         {
-            res.render("user", { list: visits });
+            res.render("users", { list: visits });
         }else{
             res.send('Invalid email or password');
         }
@@ -121,9 +121,9 @@ app.get("/user/:id", async (req, res) => {
   try {
     const _id = req.params.id;
     const doc = await Register.findById(_id);
-
+    
     if (doc) {
-      res.status(201).render("user", { list: doc });
+      res.status(201).render("user", { list: doc});
     } else {
       res.render("index");
     }
@@ -138,7 +138,7 @@ app.get("/alluser", async (req, res) => {
       const visits = await Register.find();
   
       if (visits.length > 0) {
-        res.render("user", { list: visits });
+        res.render("users", { list: visits });
       } else {
         res.status(201).render("index");
       }
@@ -171,7 +171,6 @@ app.post("/edit/:id", async (req, res) => {
 
     const updatedDoc = await doc.save();
     res.redirect("/user/" + updatedDoc._id);
-    res.status(201).render("user");
   } catch (err) {
     console.log("Cannot able to edit");
   }
